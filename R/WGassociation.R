@@ -27,8 +27,9 @@ function (formula, data, model=c("all"), quantitative = is.quantitative(formula,
     mf[[1]] <- as.name("model.frame")
     mf <- eval(mf, parent.frame())
     mt <- attr(mf, "terms")
-    temp0 <- as.character(mt)
-    adj <- paste(temp0[2], temp0[1], temp0[3])
+    # temp0 <- as.character(mt)
+    # adj <- paste(temp0[2], temp0[1], temp0[3])
+    adj <- as.character(mt)
 
     Terms <- if (missing(data)) 
         terms(formula)
