@@ -1,4 +1,0 @@
-^.*\.Rproj$
-^.*\.old$
-^\.Rproj\.user$
-memcheck.R
