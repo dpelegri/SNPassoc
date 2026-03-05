@@ -1,5 +1,5 @@
 Package: SNPassoc
-Version: 2.1-2
+Version: 2.2.0
 Date: 2024-10-28
 Depends: R (>= 4.0.0)
 Imports: 
