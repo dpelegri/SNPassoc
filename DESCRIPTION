@@ -3,7 +3,6 @@ Version: 2.1-2
 Date: 2024-10-28
 Depends: R (>= 4.0.0)
 Imports: 
-        haplo.stats, 
         mvtnorm, 
         parallel, 
         survival, 

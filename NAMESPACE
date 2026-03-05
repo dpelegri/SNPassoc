@@ -1,3 +1,4 @@
+useDynLib(SNPassoc, .registration = TRUE)
 export(
 snp,
 setupSNP,
@@ -19,12 +20,11 @@ pvalues,
 intervals,
 int, 
 interactionPval,
-make.geno,
-haplo.interaction,
 permTest,
 qqpval,
 GenomicControl,
 maxstat,
+na.geno.keep,
 LD,
 LDplot,
 LDtable,
@@ -34,10 +34,28 @@ Table.N.Per,
 Table.mean.se,
 is.Monomorphic,
 sortSNPs,
-related
+related,
+# From haplo.stats package
+dglm.fit,
+Ginv,
+make.geno,
+haplo.binomial,
+haplo.em,
+haplo.interaction,
+haplo.glm,
+haplo.glm.control,
+haplo.model.frame,
+haplo.score,
+haplo.score.glm,
+haplo.score.slide,
+louis.info,
+mf.gindx,
+residScaledGlmFit,
+score.sim.control,
+varfunc.glm.fit
 )
 
-import("haplo.stats")
+# import("haplo.stats")
 import("survival")
 import("mvtnorm")
 import("ggplot2")
@@ -88,6 +106,10 @@ S3method(print,snp)
 S3method("[",snp)
 
 S3method(print,summary.snp)
+
+# methods imported from haplo.stats package
+S3method(plot, haplo.score)
+S3method(plot, haplo.score.slide)
 
 
 S3method(plot,SNPinteraction)
